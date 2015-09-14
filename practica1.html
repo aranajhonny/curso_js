@@ -6,22 +6,12 @@
     </head>
     <body>
     <script type="text/javascript">
-      
-      var cantidadProductos = prompt("ingrese la cantidad de productos");
-      var precioTotal = prompt("precio total");
-      var pagaEnEfectivo = confirm("ha pagado en efectivo?");
-        if(cantidadProductos > 10 && precioTotal < 500){
-            descuento = 10;            
+        var nombre=prompt("ingrese su nombre");
+        
+        while(nombre==""){
+            nombre=prompt("ingrese su nombre")
         }
-        if(cantidadProductos > 10 && precioTotal > 10){
-            descuento = 15;
-        }
-        if(precioTotal < 10 && !pagaEnEfectivo ){
-            descuento = 2;
-           } 
-        if((cantidadProductos >= 500 ||  precioTotal >=1000) && (pagaEnEfectivo)){
-            descuento = descuento+ descuento*20/100;
-        }
-    </script>
+        console.log("bienvenido"+" "+nombre);
+    </script> 
     </body>
 </html>

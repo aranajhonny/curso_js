@@ -7,15 +7,21 @@
     <body>
     <script type="text/javascript">
       
-        var cantidadstock = prompt("Ingrese la cantidad de productos");
-            
-            if (cantidadstock<=5){
-                alert("Debes conseguir mas productos para el stock");
-            
-            }else{
-                alert("Tienes bastantes productos");
-            }
-        
+      var cantidadProductos = prompt("ingrese la cantidad de productos");
+      var precioTotal = prompt("precio total");
+      var pagaEnEfectivo = confirm("ha pagado en efectivo?");
+        if(cantidadProductos > 10 && precioTotal < 500){
+            descuento = 10;            
+        }
+        if(cantidadProductos > 10 && precioTotal > 10){
+            descuento = 15;
+        }
+        if(precioTotal < 10 && !pagaEnEfectivo ){
+            descuento = 2;
+           } 
+        if((cantidadProductos >= 500 ||  precioTotal >=1000) && (pagaEnEfectivo)){
+            descuento = descuento+ descuento*20/100;
+        }
     </script>
     </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>curso js</title>
+        <style type="text/css">
+            #estado {
+                display: none;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 5px;
+                background-color: aquamarine;
+                color:black;
+                font-weight: bold;
+                font-family: monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="javascript:llenarCaja()">llenar caja</a>
+        <div id="caja"></div>
+        <div id="estado"></div>
+        <input type="button" onclick="alertar('ha ocurrido un problema')" value="Generar problema">
+    </body>
+     <script type="text/javascript">
+       function llenarCaja(){
+           document.getElementById("caja");
+           caja.innerHTML = "esto es texto en js<button>presioname</button>";
+       }
+         function alertar(mensaje){
+             var estado = document.getElementById("estado");
+             estado.style.display = "block";
+             estado.innerHTML = mensaje + "</br>" + mensaje;
+         }
+    </script> 
+        
+</html>

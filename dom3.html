@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>curso js</title>
+        <style type="text/css">
+            input {
+                border: 1px solid gray;
+                background-color: aqua;
+                height: 20px;
+            }
+            input.enfoco{
+                background-color: bisque;
+                border: 1px solid green;
+            }
+        </style>
+    </head>
+    <body >
+        <label>nombre: <input type="text" id="txtnombre" onfocus="f(this)" onblur="b(this)"></label>
+        <label>apellido: <input type="text" id="txtapellido" onfocus="f(this)" onblur="b(this)"/></label>
+    </body>
+     <script type="text/javascript">
+        function f(input){
+            input.className='enfoco';
+        }
+         function b(input){
+             input.className='';
+         }
+    </script> 
+        
+</html>
